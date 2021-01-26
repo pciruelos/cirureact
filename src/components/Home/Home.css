@@ -1,0 +1,137 @@
+/********************************************* Home *****************************************/
+
+.home {
+    height: calc(100vh - 3rem);
+    row-gap: 1rem;
+    overflow: hidden;
+    background: rgb(0,0,0);
+  background: linear-gradient(360deg, rgba(0,0,0,1) 0%, rgba(76,0,19,1) 35%, rgba(76,0,19,1) 100%);
+  }
+  
+  .home__container {
+    position: relative;
+    height: calc(100vh - var(--header-height));
+    grid-template-rows: repeat(2,max-content);
+    align-content: space-around;
+    row-gap: 0rem;
+  }
+  
+  .home__data {
+    align-self: center;
+    z-index: var(--z-tooltip);
+  }
+  .home__title {
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 600;
+    /* text-shadow: 1px 1px 10px black; */
+
+  }
+
+  .home__title-color {
+    color: #ff6600;
+    font-weight: bold;
+  }
+  
+  .home__title, .home__title-color {
+    font-weight: bold;
+  }
+  .home__social {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .home__social-icon {
+    width: max-content;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+  }
+  .home__social-icon:hover {
+    color: var(--second-color);
+  }
+  .home__img {
+    position: absolute;
+    right: 0;
+    bottom: 5%;
+  }
+  .home__img img{
+    width: 250px;
+  }
+  
+  /*BUTTONS*/
+  
+  .button {
+    display: inline-block;
+    background-color: #ff6600;
+    color: #4c0013;
+    padding: 0.75rem 2.1rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+    margin-top: 15px;
+  }
+  .button:hover {
+    background-color: #4c0013;
+    color: #ff6600;
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.55);
+  }
+
+  @media screen and (min-width: 576px) {
+    .home__img {
+      width: 420px;
+      bottom: 17%;
+    }
+    .home__img img {
+      width: 420px;
+    }
+  }
+
+  @media screen and (min-width: 380px) and (min-height: 815px) {
+    .home__title {
+      font-size: 1.9rem;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .home__container {
+      height: 100vh;
+      grid-template-rows: max-content 0.5fr;
+      align-content: flex-end;
+    }
+    .home__title {
+      font-size: 2rem;
+    }
+    .home__social {
+      padding-top: 2rem;
+      flex-direction: row;
+    }
+    .home__social-icon {
+      margin-bottom: 0;
+      margin-right: 2rem;
+    }
+    .home__img {
+      width: 420px;
+      bottom: 23%;
+    }
+  
+  }
+
+  @media screen and (min-width: 1024px) {
+    .bd-container {
+      margin-left: auto;
+      margin-right: auto;
+      width: 85%;
+    }
+
+    .home__img {
+      position: absolute;
+      right: 0;
+      bottom: 7%;
+      width: 550px;
+    }
+    .home__img img {
+      width: 550px;
+    }
+  }

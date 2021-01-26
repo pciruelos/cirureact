@@ -1,0 +1,151 @@
+.bd-grid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-column-gap: 2rem;
+  width: calc(100% - 2rem);
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.l-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--primer-color);
+  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+}
+
+/****************************************** navbar *******************************************/
+
+.nav {
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height);
+  background-color: #4c0013;
+  font-weight: 600;
+}
+
+.nav__item {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.nav__link {
+  position: relative;
+  color: #fff;
+}
+.nav__link:hover {
+  color: #fff;
+  transition: 0.3s;
+}
+
+.nav-brand {
+  color: var(--second-color);
+}
+.nav__toggle {
+  color: var(--second-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* active link style  in menu */
+.active {
+
+  color: white;
+}
+
+.active::after {
+  border-bottom: 2px solid #ffffff;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+  }
+  .nav__list {
+    display: flex;
+  }
+  .nav__item {
+    margin-bottom: 0;
+    margin: 20px;
+  }
+  .nav__toggle {
+    display: none;
+  }
+  .bd-grid {
+    width: calc(100% - 4rem);
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--second-color);
+    transition: 0.5s;
+    backdrop-filter: blur(10px);
+    text-align: center;
+  }
+}
+
+/*=== Show menu add styles ===*/
+.show {
+  top: var(--header-height);
+  right: 0;
+}
+
+/* MENU DESPLEJABLE MOBILE */
+
+/* background header */
+.scroll-header {
+  background-color: var(--primer-color);
+  box-shadow: black;
+}
+
+.scroll-header .nav-brand,
+.scroll-header .nav__toggle,
+.scroll-header .nav__link {
+  background-color: var(--primer-color);
+  color: var(--second-color);
+}
+
+.scroll-header .nav__menu {
+  background-color: var(--primer-color);
+}
+
+/* scrop top styles */
+.scrolltop {
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 00.5rem;
+  z-index: var(--z-tooltip);
+  transition: 0.4s;
+  visibility: hidden;
+}
+.scrolltop:hover {
+  background-color: rgba(97, 0, 0, 0.788);
+}
+
+.scrolltop__icon {
+  font-size: 2rem;
+  color: var(--second-color);
+}
+
+/* display scroll top */
+.show-scroll {
+  visibility: visible;
+  bottom: 1.5rem;
+}

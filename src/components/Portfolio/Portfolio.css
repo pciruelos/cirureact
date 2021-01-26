@@ -1,0 +1,74 @@
+/***************************************** portfolio ************************************/
+
+.portfolio {
+  background: rgb(0, 0, 0);
+}
+.portfolio__nav {
+  text-align: center;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+.portfolio__item {
+  margin: 0 1rem;
+  cursor: pointer;
+}
+.portfolio__content {
+  margin: 0.5rem 0;
+  background-color: black;
+  border: 1px solid var(--primer-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.55);
+}
+
+.portfolio__img {
+  width: 100%;
+  transition: 0.4s;
+}
+.portfolio__data {
+  padding: 1rem;
+}
+.portfolio__subtitle {
+  font-size: var(--z-normal);
+}
+.portfolio__title {
+  font-size: 24px;
+  color: var(--second-color);
+  margin: 1rem 0;
+}
+.button-outline {
+  border: 1px solid var(--primer-color);
+  background-color: black;
+  color: #ff6600;
+  margin: 0;
+}
+
+.button-outline:hover {
+  color: var(--primer-color);
+  background-color: var(--second-color);
+  border: 1p solid var(--second-color);
+}
+
+.portfolio__content:hover {
+  box-shadow: 0 5px 5px rgba(145, 0, 0, 0.5);
+}
+.portfolio__content:hover .portfolio__img {
+  transform: scale(1.02);
+}
+
+.active-portfolio {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 576px) {
+  .portfolio__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
